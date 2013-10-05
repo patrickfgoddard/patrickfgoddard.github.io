@@ -4,7 +4,7 @@
        // one top level chosen and put at end
        var toplevelArray = new Array("rock", "metal", "folk", "blues", "jazz", "pop", "hip hop", "core", "psychobilly", "techno", "polka", "trance", "funk", "rock en espanol", "rumba", "gospel", "salsa", "samba", "screamo", "country", "shoegaze", "ska", "speedcore", "soul", "tango", "tumba", "waltz", "zydeco");
        
-      var newGenre = function() {
+      function newGenre() {
         var genre = '';
         // choose 4 random descriptors
         var descriptor =genreRand(4,descriptorsArray);
@@ -40,10 +40,15 @@
         }
         
         // On page load, populate the give with generated genre.
-        $('#genre').text(newGenre);
+        var initialGenre = newGenre();
+        $('#genre').text(initialGenre);
         // set action when "Refresh" button is clicked.
         $('#generate-genre').bind('click', function() {
-          $('#genre').text(newGenre);
+          var refreshedGenre = newGenre();
+          $('#genre').text(refreshedGenre);
+          // refresh tweet button copy with new genre
+          $("#genre-tweet").html('<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://patrickfgoddard.github.io/genre.html" data-text="My band\'s genre is ' + refreshedGenre + '. What\'s yours? " data-count="vertical" data-via="patrickfgoddard">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>');
+
         });
 
 })(jQuery);
