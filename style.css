@@ -13,3 +13,8 @@ input {
   border-bottom: 1px solid #ccc;
   margin: 0 0 1em 0;
 }
+
+.navbar-brand {
+    background: url("/assets/img/clownmask.png") no-repeat scroll 0 50% / 25% auto rgba(0, 0, 0, 0);
+    padding-left: 2em;
+}
