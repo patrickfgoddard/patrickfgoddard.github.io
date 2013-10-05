@@ -1,62 +1,45 @@
-<!doctype html>
-<html lang="en-US">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>{{ site.title }} | {{ page.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
-  <!-- Bootstrap core CSS -->
-  <link type="text/css" href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    {% include header.html %}
+    <!-- Place anything custom after this. -->
+  </head>
+  <body>
+    <a class="sr-only" href="#content">Skip navigation</a>
 
-    <!-- Custom styles for this template -->
-    <link href="/bootstrap/css/jumbotron.css" rel="stylesheet">
+    {% include nav-main.html %}
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="../../assets/js/html5shiv.js"></script>
-      <script src="../../assets/js/respond.min.js"></script>
-    <![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-</head>
-
-<body>
-  <header id="header" class="">
-  <h1>{{ site.title }}</h1>
-  <p class="tagline">{{ site.tagline }}</p>
-  <nav class="navbar navbar-inverse" role="navigation">
     <div class="container">
-      <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
+      <div class="row">
+        <div class="col-md-12" role="main">
+          {{ content }}
+        </div>
       </div>
-      <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="/" title="">Home</a></li>
-            <li><a href="/about.html" title="">About</a></li>
-          </ul>
-      </div>
+
     </div>
-  </nav>  
-  </header><!-- /header -->
-  
 
-  
-<section>
-{{ content }}
-</section>
+    <!-- Footer
+    ================================================== -->
+    <footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        {% include social-buttons.html %}
 
-<footer>&copy; 2013 Patrick F. Goddard</footer>
+       
+        <ul class="footer-links">
+         <!-- <li><a href="{{ page.base_url }}2.3.2/">Bootstrap 2.3.2 docs</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="{{ site.blog }}">Blog</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="{{ site.repo }}/issues?state=open">Issues</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="{{ site.repo }}/releases">Releases</a></li>
+        -->
+        </ul>
+      </div>
+    </footer>
 
-  <script src="/bootstrap/js/bootstrap.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-</body>
+    <!-- JS and analytics only. -->
+    {% include footer.html %}
+  </body>
 </html>

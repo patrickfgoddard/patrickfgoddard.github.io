@@ -1,22 +1,32 @@
 ---
-layout: default
-title: "home"
+layout: page
+title: "Blog for Patrick F. Goddard"
 description: "home page"
 category: rebuild
-tags: []
 ---
-<div class="jumbotron">
-      <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-      </div>
-    </div>
-<ul>
+<!-- <div class="jumbotron">
+  <div class="container">
+    <h1>Patrick F. Goddard</h1>
+    <p>Web development, Drupal, skateboarding.</p>
+    <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+  </div>
+</div>
+-->
+<div class="blog-list">
   {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <p>{{ post.excerpt }}</p>
-    </li>
+    <div class="blog-post">
+      <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+      <div class="blog-date"><em>{{ post.date | date_to_long_string }}</em></div>
+      {% unless post.tags == empty %}
+        Tags:
+        <ul class="tag_box list-inline">
+          {% for tag in post.tags %}
+            <li><i class="icon-tags">{{ tag }}</i></li>
+          {% endfor %}
+        </ul>
+      {% endunless %}
+
+      <p>{{ post.content }}</p>
+    </div>
   {% endfor %}
-</ul>
+</div>
