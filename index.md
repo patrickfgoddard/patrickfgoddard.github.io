@@ -3,6 +3,7 @@ layout: page
 title: "Blog for Patrick F. Goddard"
 description: "home page"
 category: rebuild
+slug: 'home'
 ---
 <!-- <div class="jumbotron">
   <div class="container">
