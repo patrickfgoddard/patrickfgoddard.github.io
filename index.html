@@ -8,7 +8,104 @@
     <meta name="author" content="">
     <title>Patrick Goddard. Web developer and musician from Long Beach, California</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="assets/style.css">
+    <!-- <link rel="stylesheet" href="assets/style.css"> -->
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans:400,400i,700');
+
+:root {
+  --blue: #0b3c5d;
+  --light-blue: #328cc1;
+  --gold: #d9b310;
+  --blackish: #1d2731;
+}
+
+html {
+  /* see https://snook.ca/archives/html_and_css/font-size-with-rem */
+  font-size: 62.5%;
+}
+
+html,
+body {
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: 'Merriweather', Times, "Times New Roman", serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: ". ." ". .";
+    column-gap: 20px;
+    row-gap: 20px;
+    height: 100vh;
+    max-width: 1600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+}
+
+.grid-container > * {
+  background-color: #eee;
+  padding: 30px;
+}
+
+iframe {
+  border: 0;
+  width: 100%;
+}
+
+.intro {
+  background-color: var(--blue);
+  color: #fff;
+}
+
+.grid-container a:link,
+.grid-container a:visited {
+  color: #fff;
+}
+
+.music {
+  background-color: var(--light-blue);
+  color: #fff;
+}
+
+.blog {
+  /* background-color: var(--gold); */
+  padding: 0;
+}
+
+.blog img {
+  width: 100%;
+}
+
+.other {
+  align-items: flex-end;
+  background-color: var(--blackish);
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+}
+
+    </style>
   </head>
   <body>
     <div class="grid-container">
