@@ -30,6 +30,10 @@ h3 {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
+h1 {
+  text-transform: uppercase;
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
