@@ -72,6 +72,9 @@ iframe {
 }
 
 .intro {
+  background-image: url('assets/img/vector-pat.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
   background-color: var(--blue);
   color: #fff;
 }
@@ -82,8 +85,17 @@ iframe {
 }
 
 .music {
+  background-image: url('assets/img/guitar.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: var(--blue);
+  color: #fff;
   background-color: var(--light-blue);
   color: #fff;
+}
+
+.music h2 {
+  text-transform: uppercase;
 }
 
 .blog {
@@ -97,11 +109,32 @@ iframe {
 
 .other {
   align-items: flex-end;
+  background-image: url('assets/img/skateboard.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
   background-color: var(--blackish);
   color: #fff;
   display: flex;
   justify-content: flex-end;
 }
+
+.inline-list,
+.inline-list li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.inline-list li {
+  display: inline-block;
+}
+
+.inline-list li:not(:last-child)::after {
+  content: '|';
+  margin-left: 0.5rem;
+}
+
 
     </style>
   </head>
@@ -110,8 +143,19 @@ iframe {
       <header class="intro">
         <h1>Patrick Goddard</h1>
         <h2>Web Developer and Musician.</h2>
-        <p>Long Beach, CA. I play music and build websites.</p>
+        <p>From Long Beach, CA.</p>
         <p><a href="https://www.lungrecords.com/patrick-goddard" target="_blank">Music bio</a></p>
+        <ul class="inline-list">
+          <li>Drupal</li>
+          <li>CSS</li>
+          <li>HTML</li>
+        </ul>
+        <ul class="inline-list">
+          <li>Singer/Songwriter</li>
+          <li>Post punk</li>
+          <li>Indie</li>
+          <li>Pop Punk</li>
+        </ul>
       </header>
       <div class="music">
         <h2>Music</h2>
