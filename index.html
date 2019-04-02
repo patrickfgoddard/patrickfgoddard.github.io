@@ -36,6 +36,17 @@ body {
   font-family: 'Merriweather', Times, "Times New Roman", serif;
 }
 
+a:link,
+a:visited {
+  color: #fff;
+  transition: color 0.25s;
+}
+
+a:link:hover,
+a:visited:hover {
+  color: var(--gold);
+}
+
 h1,
 h2,
 h3 {
@@ -78,20 +89,31 @@ iframe {
   background-size: cover;
   background-color: var(--blue);
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.grid-container a:link,
-.grid-container a:visited {
-  color: #fff;
+.intro h1 {
+  margin-bottom: 0;
+}
+
+.intro h2 {
+  margin-top: 0;
+}
+
+.intro .info {
+  flex-shrink: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: right;
 }
 
 .music {
-  background-image: url('assets/img/guitar.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: var(--blue);
   color: #fff;
-  background-color: var(--light-blue);
+  background-color: #333;
   color: #fff;
 }
 
@@ -100,7 +122,7 @@ iframe {
 }
 
 .blog {
-  /* background-color: var(--gold); */
+  background-color: var(--blackish);
   padding: 0;
 }
 
@@ -110,14 +132,9 @@ iframe {
 
 .other {
   align-items: flex-end;
-  background-image: url('assets/img/skateboard.svg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
   background-color: var(--blackish);
   color: #fff;
   display: flex;
-  min-height: 40rem;
   justify-content: flex-end;
 }
 
@@ -136,8 +153,6 @@ iframe {
   content: '|';
   margin-left: 0.5rem;
 }
-
-
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137349729-1"></script>
@@ -154,19 +169,21 @@ iframe {
       <header class="intro">
         <h1>Patrick Goddard</h1>
         <h2>Web Developer and Musician.</h2>
-        <p>From Long Beach, CA.</p>
-        <p><a href="https://www.lungrecords.com/patrick-goddard" target="_blank">Music bio</a></p>
-        <ul class="inline-list">
-          <li>Drupal</li>
-          <li>CSS</li>
-          <li>HTML</li>
-        </ul>
-        <ul class="inline-list">
-          <li>Singer/Songwriter</li>
-          <li>Post punk</li>
-          <li>Indie</li>
-          <li>Pop Punk</li>
-        </ul>
+
+        <div class="info">
+          <div>Long Beach, CA.</div>
+          <ul class="inline-list">
+            <li>Drupal</li>
+            <li>CSS</li>
+            <li>HTML</li>
+          </ul>
+          <ul class="inline-list">
+            <li>Singer/Songwriter</li>
+            <li>Post punk</li>
+            <li>Indie</li>
+            <li>Pop Punk</li>
+          </ul>
+        </div>
       </header>
       <div class="music">
         <h2>Music</h2>
@@ -177,12 +194,12 @@ iframe {
         <div>
           <iframe src="https://bandcamp.com/EmbeddedPlayer/album=2407553036/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="http://patrickgoddard.bandcamp.com/album/this-time-is-ours">This Time Is Ours by Patrick Goddard</a></iframe>
         </div>
-        <p><a href="https://patrickgoddard.bandcamp.com" target="_blank">All my releases on Bandcamp</a></p>
+        <ul class="inline-list">
+          <li><a href="https://patrickgoddard.bandcamp.com" target="_blank">More on Bandcamp</a></li>
+          <li><a href="https://www.lungrecords.com/patrick-goddard" target="_blank">Lung Records</a></li>
+        </ul>
       </div>
-      <div class="blog">
-        <!-- <h2>Blog</h2> -->
-        <img src="assets/img/collage.jpg" alt="Collage">
-      </div>
+      <div class="blog"></div>
       <footer class="other">
         <div>
           <p>info [at] patrickfgoddard dot com</p>
