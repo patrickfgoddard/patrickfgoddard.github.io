@@ -44,7 +44,7 @@ h1 {
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr min-content;
     grid-template-areas: ". ." ". .";
     column-gap: 20px;
     row-gap: 20px;
@@ -95,4 +95,5 @@ iframe {
   color: #fff;
   display: flex;
   justify-content: flex-end;
+  padding: 2rem;
 }
